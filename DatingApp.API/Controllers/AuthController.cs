@@ -12,7 +12,7 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace DatingApp.API.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -67,7 +67,7 @@ namespace DatingApp.API.Controllers
                 Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = creds
             };
-            
+
             var tokenHandler = new JwtSecurityTokenHandler();
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
